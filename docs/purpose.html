@@ -52,6 +52,68 @@
 
 
 
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -105,8 +167,45 @@
 <p>are used in the field of machine learning. Contrary to public opinon machine learning is not mainly focused on neural networks.</p>
 <div id="survey-participants-education-level" class="section level2">
 <h2><span class="header-section-number">2.1</span> Survey participants education level</h2>
-<p>The following plot shows Survey participants education level</p>
+<p>The following plot shows Survey participants education level. Very few participants have a non-academic background. By no means a academic background is a pre-requisit to use machine learning two skills are very helpful</p>
+<ul>
+<li>Coding experience</li>
+<li>Statistical knowledge</li>
+</ul>
 <p><img src="Figs/Education-1.png" width="1152" /></p>
+<p>Coding experience speeds up the process to implement the machine learning ideas and concepts. Most effort during a machien learning project will go into</p>
+<ul>
+<li>Data pre-processing</li>
+<li>Model tuning</li>
+</ul>
+<p>The actual implementation of the algorithm is mostly a matter of 10 - 20 lines of code. Below the neural network definition for a self driving RC model car of the <a href="https://www.donkeycar.com">donkey car framework</a>.</p>
+<p>The neural network is defined using the <a href="https://keras.io">Keras API</a> which sits on top of <a href="https://www.tensorflow.org">Tensorflow</a>, the program is written in <a href="https://www.python.org">Python</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1">    img_in <span class="op">=</span> Input(shape<span class="op">=</span>input_shape, name<span class="op">=</span><span class="st">&#39;img_in&#39;</span>)          </a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    x <span class="op">=</span> img_in</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    x <span class="op">=</span> Convolution2D(<span class="dv">24</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_1&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    x <span class="op">=</span> Dropout(drop)(x)                                                    </a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    x <span class="op">=</span> Convolution2D(<span class="dv">32</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_2&quot;</span>)(x)     </a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">    x <span class="op">=</span> Dropout(drop)(x)                                              </a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">64</span> :</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">    <span class="cf">elif</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)   </a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    x <span class="op">=</span> Dropout(drop)(x)                                             </a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_5&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">    x <span class="op">=</span> Flatten(name<span class="op">=</span><span class="st">&#39;flattened&#39;</span>)(x)            </a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">    x <span class="op">=</span> Dense(<span class="dv">100</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_1&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">    x <span class="op">=</span> Dropout(drop)(x)                              </a>
+<a class="sourceLine" id="cb1-21" data-line-number="21">    x <span class="op">=</span> Dense(<span class="dv">50</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_2&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">    x <span class="op">=</span> Dropout(drop)(x)            </a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">    angle_out <span class="op">=</span> Dense(<span class="dv">15</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;angle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">    throttle_out <span class="op">=</span> Dense(<span class="dv">20</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;throttle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">    </a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">    model <span class="op">=</span> Model(inputs<span class="op">=</span>[img_in], outputs<span class="op">=</span>[angle_out, throttle_out])</a></code></pre></div>
 <p><img src="Figs/AlgoEducation-1.png" width="1152" /></p>
 <p><img src="Figs/AlgoExperience-1.png" width="1152" /></p>
 <p><img src="Figs/histo_age-1.png" width="1152" /></p>
