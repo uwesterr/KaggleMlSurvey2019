@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Results | Analysis of 2019 Kaggle ML &amp; DS Survey</title>
+  <meta name="description" content="Analysing the survey data to find commonly used software tools." />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Results | Analysis of 2019 Kaggle ML &amp; DS Survey" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Analysing the survey data to find commonly used software tools." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Results | Analysis of 2019 Kaggle ML &amp; DS Survey" />
+  
+  <meta name="twitter:description" content="Analysing the survey data to find commonly used software tools." />
+  
+
+<meta name="author" content="Uwe Sterr" />
+
+
+<meta name="date" content="2020-01-13" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="literature.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Analysis of 2019 Kaggle ML & DS Survey</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>2</b> Results</a><ul>
+<li class="chapter" data-level="2.1" data-path="results.html"><a href="results.html#survey-participants-education-level"><i class="fa fa-check"></i><b>2.1</b> Survey participants education level</a></li>
+<li class="chapter" data-level="2.2" data-path="results.html"><a href="results.html#who-uses-which-algorithm"><i class="fa fa-check"></i><b>2.2</b> Who uses which algorithm</a></li>
+<li class="chapter" data-level="2.3" data-path="results.html"><a href="results.html#experience-and-algorithms"><i class="fa fa-check"></i><b>2.3</b> Experience and algorithms</a></li>
+<li class="chapter" data-level="2.4" data-path="results.html"><a href="results.html#experience-and-new-algorithms"><i class="fa fa-check"></i><b>2.4</b> Experience and new algorithms</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Analysis of 2019 Kaggle ML &amp; DS Survey</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="results" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Results</h1>
+<p>The results are presented by graphs relating parameters either vs time or vs other parameters</p>
+<div id="survey-participants-education-level" class="section level2">
+<h2><span class="header-section-number">2.1</span> Survey participants education level</h2>
+<p>The following plot shows Survey participants education level. Very few participants have a non-academic background. By no means a academic background is a pre-requisit to use machine learning two skills are very helpful</p>
+<ul>
+<li>Coding experience</li>
+<li>Statistical knowledge</li>
+</ul>
+<hr />
+<p><img src="Figs/Education-1.png" width="1152" /></p>
+<hr />
+<p>Coding experience speeds up the process to implement the machine learning ideas and concepts. Most effort during a machien learning project will go into</p>
+<ul>
+<li>Data pre-processing</li>
+<li>Model tuning</li>
+</ul>
+<p>The actual implementation of the algorithm is mostly a matter of 10 - 20 lines of code. Below the neural network definition for a self driving RC model car of the <a href="https://www.donkeycar.com">donkey car framework</a>.</p>
+<p>The neural network is defined using the <a href="https://keras.io">Keras API</a> which sits on top of <a href="https://www.tensorflow.org">Tensorflow</a>, the program is written in <a href="https://www.python.org">Python</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1">    img_in <span class="op">=</span> Input(shape<span class="op">=</span>input_shape, name<span class="op">=</span><span class="st">&#39;img_in&#39;</span>)          </a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    x <span class="op">=</span> img_in</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    x <span class="op">=</span> Convolution2D(<span class="dv">24</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_1&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    x <span class="op">=</span> Dropout(drop)(x)                                                    </a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    x <span class="op">=</span> Convolution2D(<span class="dv">32</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_2&quot;</span>)(x)     </a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">    x <span class="op">=</span> Dropout(drop)(x)                                              </a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">64</span> :</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">    <span class="cf">elif</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)   </a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    x <span class="op">=</span> Dropout(drop)(x)                                             </a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_5&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">    x <span class="op">=</span> Flatten(name<span class="op">=</span><span class="st">&#39;flattened&#39;</span>)(x)            </a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">    x <span class="op">=</span> Dense(<span class="dv">100</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_1&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">    x <span class="op">=</span> Dropout(drop)(x)                              </a>
+<a class="sourceLine" id="cb1-21" data-line-number="21">    x <span class="op">=</span> Dense(<span class="dv">50</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_2&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">    x <span class="op">=</span> Dropout(drop)(x)            </a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">    angle_out <span class="op">=</span> Dense(<span class="dv">15</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;angle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">    throttle_out <span class="op">=</span> Dense(<span class="dv">20</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;throttle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">    </a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">    model <span class="op">=</span> Model(inputs<span class="op">=</span>[img_in], outputs<span class="op">=</span>[angle_out, throttle_out])</a></code></pre></div>
+</div>
+<div id="who-uses-which-algorithm" class="section level2">
+<h2><span class="header-section-number">2.2</span> Who uses which algorithm</h2>
+<p>There are plenty of machine learning algorithms in use, some have been around for quite some time already, others are quite new. Especially in the field of neural networks there is plenty of research ongoing as can be seen by a “neural network” search on the moderated but not peer reviewed electronic preprint plattform <a href="https://arxiv.org/search/?query=neural+network&amp;searchtype=all&amp;source=header">Arxiv</a>.</p>
+<hr />
+<p><img src="Figs/AlgoEducation-1.png" width="1152" /></p>
+<hr />
+<p>Splitting the graphs up for each category of education and plotting the percentage of usage for the given education level gives an insight into how the usage of algorithms differs over levels of education</p>
+<hr />
+<p><img src="Figs/AlgoEducationPercent-1.png" width="1152" /></p>
+<hr />
+<p>The graph above shows that regression and tree-based algorithms are very popular. Besides the fact that these concepts are less computationally intensive than neural networks, they are also popular because they are available in the de facto standard machine learning library in Python, <a href="https://scikit-learn.org/stable/">scikit-learn</a>.<br />
+Below historical data to some the algorithms are given, together with links to the wikipedia article of the algorithm.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear regression</a>
+<ul>
+<li>Legendre, 1805</li>
+<li>Gauss, 1809</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Logistic_regression">Logistic regression</a>
+<ul>
+<li>Pierre Francois Verhulst, 1830s</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Random_forest">Random forest</a>
+<ul>
+<li>Ho, 1995</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Gradient_boosting">Gradient boosting trees</a>
+<ul>
+<li>L. Breiman, 1997</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">Convolutional neural networks</a>
+<ul>
+<li>Kunihiko Fukushima, 1980</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Recurrent_neural_network">Recurrent neural networks</a>
+<ul>
+<li>David Rumelhart, 1986</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Neural_network">Dense neural networks</a>
+<ul>
+<li>Independently proposed by Alexander Bain, 1873 and William James, 1890</li>
+</ul></li>
+<li><a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">Generative adversarial networks</a>
+<ul>
+<li>Goodfellow, 2010-2014</li>
+</ul></li>
+</ul>
+</div>
+<div id="experience-and-algorithms" class="section level2">
+<h2><span class="header-section-number">2.3</span> Experience and algorithms</h2>
+<p>Most of the survey participants have less than 3 years experience as can be seen in the graph below.</p>
+<hr />
+<p><img src="Figs/Experience-1.png" width="1152" /></p>
+<hr />
+<p>The usage of algorithms for different duration of experience is given in the graph below.</p>
+<hr />
+<p><img src="Figs/AlgoExperience-1.png" width="1152" /></p>
+<hr />
+<p>adfasfa</p>
+<hr />
+<p><img src="Figs/AlgoExperienceFacet-1.png" width="1152" /></p>
+<hr />
+</div>
+<div id="experience-and-new-algorithms" class="section level2">
+<h2><span class="header-section-number">2.4</span> Experience and new algorithms</h2>
+<p>sadfadsf</p>
+<hr />
+<p><img src="Figs/AlgoExperienceReduced-1.png" width="1152" /></p>
+<hr />
+<p><img src="Figs/histo_age-1.png" width="1152" /></p>
+<p><img src="Figs/plotAgeFacetContintent-1.png" width="1152" /></p>
+<p><img src="Figs/CreateWorldMap-1.png" width="1152" /></p>
+<p><img src="Figs/WordMap-1.png" width="1152" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="literature.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdownbook.pdf", "bookdownbook.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
