@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 24 Literature | Analysis of 2019 Kaggle ML &amp; DS Survey</title>
+  <title>Chapter 3 Survey participants education level | Analysis of 2019 Kaggle ML &amp; DS Survey</title>
   <meta name="description" content="Analysing the survey data to find commonly used software tools." />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 24 Literature | Analysis of 2019 Kaggle ML &amp; DS Survey" />
+  <meta property="og:title" content="Chapter 3 Survey participants education level | Analysis of 2019 Kaggle ML &amp; DS Survey" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 24 Literature | Analysis of 2019 Kaggle ML &amp; DS Survey" />
+  <meta name="twitter:title" content="Chapter 3 Survey participants education level | Analysis of 2019 Kaggle ML &amp; DS Survey" />
   
   <meta name="twitter:description" content="Analysing the survey data to find commonly used software tools." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="favorite-automated-machine-learning-tools-or-partial-automl-tools.html"/>
-
+<link rel="prev" href="results.html"/>
+<link rel="next" href="who-uses-which-algorithm.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -177,18 +177,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1">
-<h1><span class="header-section-number">Chapter 24</span> Literature</h1>
-<p>Here is a review of existing methods.</p>
-
+<div id="survey-participants-education-level" class="section level1">
+<h1><span class="header-section-number">Chapter 3</span> Survey participants education level</h1>
+<p>The following plot shows Survey participants education level. Very few participants have a non-academic background. By <strong>no means a academic background is a pre-requisit to use machine learning</strong> two skills are very helpful</p>
+<ul>
+<li>Coding experience</li>
+<li>Statistical knowledge</li>
+</ul>
+<hr />
+<p><img src="Figs/Education-1.png" width="1152" /></p>
+<hr />
+<p>Coding experience speeds up the process to implement the machine learning ideas and concepts. Most effort during a machien learning project will go into</p>
+<ul>
+<li>Data pre-processing</li>
+<li>Model tuning</li>
+</ul>
+<p>The actual implementation of the <strong>algorithm is mostly a matter of 10 - 20 lines of code</strong>. Below the neural network definition for a self driving RC model car of the <a href="https://www.donkeycar.com">donkey car framework</a>.</p>
+<p>The neural network is defined using the <a href="https://keras.io">Keras API</a> which sits on top of <a href="https://www.tensorflow.org">Tensorflow</a>, the program is written in <a href="https://www.python.org">Python</a></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1">    img_in <span class="op">=</span> Input(shape<span class="op">=</span>input_shape, name<span class="op">=</span><span class="st">&#39;img_in&#39;</span>)          </a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">    x <span class="op">=</span> img_in</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">    x <span class="op">=</span> Convolution2D(<span class="dv">24</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_1&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">    x <span class="op">=</span> Dropout(drop)(x)                                                    </a>
+<a class="sourceLine" id="cb1-5" data-line-number="5">    x <span class="op">=</span> Convolution2D(<span class="dv">32</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_2&quot;</span>)(x)     </a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">    x <span class="op">=</span> Dropout(drop)(x)                                              </a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">5</span>,<span class="dv">5</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="cf">else</span>:</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_3&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="cf">if</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">64</span> :</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">2</span>,<span class="dv">2</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)    </a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">    <span class="cf">elif</span> input_shape[<span class="dv">0</span>] <span class="op">&gt;</span> <span class="dv">32</span> :</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_4&quot;</span>)(x)   </a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    x <span class="op">=</span> Dropout(drop)(x)                                             </a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    x <span class="op">=</span> Convolution2D(<span class="dv">64</span>, (<span class="dv">3</span>,<span class="dv">3</span>), strides<span class="op">=</span>(<span class="dv">1</span>,<span class="dv">1</span>), activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;conv2d_5&quot;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">    x <span class="op">=</span> Flatten(name<span class="op">=</span><span class="st">&#39;flattened&#39;</span>)(x)            </a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">    x <span class="op">=</span> Dense(<span class="dv">100</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_1&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">    x <span class="op">=</span> Dropout(drop)(x)                              </a>
+<a class="sourceLine" id="cb1-21" data-line-number="21">    x <span class="op">=</span> Dense(<span class="dv">50</span>, activation<span class="op">=</span><span class="st">&#39;relu&#39;</span>, name<span class="op">=</span><span class="st">&quot;fc_2&quot;</span>)(x)  </a>
+<a class="sourceLine" id="cb1-22" data-line-number="22">    x <span class="op">=</span> Dropout(drop)(x)            </a>
+<a class="sourceLine" id="cb1-23" data-line-number="23">    angle_out <span class="op">=</span> Dense(<span class="dv">15</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;angle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-24" data-line-number="24">    throttle_out <span class="op">=</span> Dense(<span class="dv">20</span>, activation<span class="op">=</span><span class="st">&#39;softmax&#39;</span>, name<span class="op">=</span><span class="st">&#39;throttle_out&#39;</span>)(x)      </a>
+<a class="sourceLine" id="cb1-25" data-line-number="25">    </a>
+<a class="sourceLine" id="cb1-26" data-line-number="26">    model <span class="op">=</span> Model(inputs<span class="op">=</span>[img_in], outputs<span class="op">=</span>[angle_out, throttle_out])</a></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="favorite-automated-machine-learning-tools-or-partial-automl-tools.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="results.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="who-uses-which-algorithm.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
