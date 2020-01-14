@@ -24,7 +24,7 @@
 <meta name="author" content="Uwe Sterr" />
 
 
-<meta name="date" content="2020-01-13" />
+<meta name="date" content="2020-01-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -166,7 +166,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>The results are presented by graphs relating parameters either vs time or vs other parameters</p>
 <div id="survey-participants-education-level" class="section level2">
 <h2><span class="header-section-number">2.1</span> Survey participants education level</h2>
-<p>The following plot shows Survey participants education level. Very few participants have a non-academic background. By no means a academic background is a pre-requisit to use machine learning two skills are very helpful</p>
+<p>The following plot shows Survey participants education level. Very few participants have a non-academic background. By <strong>no means a academic background is a pre-requisit to use machine learning</strong> two skills are very helpful</p>
 <ul>
 <li>Coding experience</li>
 <li>Statistical knowledge</li>
@@ -179,7 +179,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Data pre-processing</li>
 <li>Model tuning</li>
 </ul>
-<p>The actual implementation of the algorithm is mostly a matter of 10 - 20 lines of code. Below the neural network definition for a self driving RC model car of the <a href="https://www.donkeycar.com">donkey car framework</a>.</p>
+<p>The actual implementation of the <strong>algorithm is mostly a matter of 10 - 20 lines of code</strong>. Below the neural network definition for a self driving RC model car of the <a href="https://www.donkeycar.com">donkey car framework</a>.</p>
 <p>The neural network is defined using the <a href="https://keras.io">Keras API</a> which sits on top of <a href="https://www.tensorflow.org">Tensorflow</a>, the program is written in <a href="https://www.python.org">Python</a></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" data-line-number="1">    img_in <span class="op">=</span> Input(shape<span class="op">=</span>input_shape, name<span class="op">=</span><span class="st">&#39;img_in&#39;</span>)          </a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">    x <span class="op">=</span> img_in</a>
@@ -210,16 +210,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="who-uses-which-algorithm" class="section level2">
 <h2><span class="header-section-number">2.2</span> Who uses which algorithm</h2>
-<p>There are plenty of machine learning algorithms in use, some have been around for quite some time already, others are quite new. Especially in the field of neural networks there is plenty of research ongoing as can be seen by a “neural network” search on the moderated but not peer reviewed electronic preprint plattform <a href="https://arxiv.org/search/?query=neural+network&amp;searchtype=all&amp;source=header">Arxiv</a>.</p>
+<p>There are plenty of machine learning algorithms in use, some have been around for quite some time already, others are quite new. Especially in the field of <strong>neural networks there is plenty of research ongoing</strong> as can be seen by a “neural network” search on the moderated but not peer reviewed electronic preprint plattform <a href="https://arxiv.org/search/?query=neural+network&amp;searchtype=all&amp;source=header">Arxiv</a>.</p>
 <hr />
 <p><img src="Figs/AlgoEducation-1.png" width="1152" /></p>
 <hr />
-<p>Splitting the graphs up for each category of education and plotting the percentage of usage for the given education level gives an insight into how the usage of algorithms differs over levels of education</p>
+<p>Splitting the graphs up for each category of education and plotting the percentage of usage for the given education level gives an insight into how the <strong>usage of algorithms differs over levels of education</strong></p>
 <hr />
 <p><img src="Figs/AlgoEducationPercent-1.png" width="1152" /></p>
 <hr />
-<p>The graph above shows that regression and tree-based algorithms are very popular. Besides the fact that these concepts are less computationally intensive than neural networks, they are also popular because they are available in the de facto standard machine learning library in Python, <a href="https://scikit-learn.org/stable/">scikit-learn</a>.<br />
-Below historical data to some the algorithms are given, together with links to the wikipedia article of the algorithm.</p>
+<p>The graph above shows that regression and tree-based algorithms are very popular</p>
+<p>They are:</p>
+<ul>
+<li>Less computationally intensive than neural networks</li>
+<li>Available in the de facto standard machine learning library in Python, <a href="https://scikit-learn.org/stable/">scikit-learn</a>.</li>
+</ul>
+<p>Below <strong>historical data to some the algorithms</strong> are given, together with links to the wikipedia article of the algorithm.</p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Linear_regression">Linear regression</a>
 <ul>
@@ -258,7 +263,7 @@ Below historical data to some the algorithms are given, together with links to t
 </div>
 <div id="experience-and-algorithms" class="section level2">
 <h2><span class="header-section-number">2.3</span> Experience and algorithms</h2>
-<p>Most of the survey participants have less than 3 years experience as can be seen in the graph below.</p>
+<p>Most of the survey participants have less than 3 years experience as can be seen in the graph below. Due to fact that the number in each category differs a lot a representation of percentages is beneficial for some analysis.</p>
 <hr />
 <p><img src="Figs/Experience-1.png" width="1152" /></p>
 <hr />
@@ -266,10 +271,15 @@ Below historical data to some the algorithms are given, together with links to t
 <hr />
 <p><img src="Figs/AlgoExperience-1.png" width="1152" /></p>
 <hr />
-<p>adfasfa</p>
+<p>Splitting the graphs up for each category of experience and plotting the percentage of usage for the given experience level gives an insight into how the usage of algorithms differs over levels of experience</p>
 <hr />
 <p><img src="Figs/AlgoExperienceFacet-1.png" width="1152" /></p>
 <hr />
+<ul>
+<li>Regression and trees are popular at all level of experience</li>
+<li>Neural networks are more popular for less experienced</li>
+<li>20% of very experienced use no algorithm</li>
+</ul>
 </div>
 <div id="experience-and-new-algorithms" class="section level2">
 <h2><span class="header-section-number">2.4</span> Experience and new algorithms</h2>
@@ -277,6 +287,9 @@ Below historical data to some the algorithms are given, together with links to t
 <hr />
 <p><img src="Figs/AlgoExperienceReduced-1.png" width="1152" /></p>
 <hr />
+<p>Splitting the graphs up for each category of experience and plotting the percentage of usage for the given experience level gives an insight into how the usage of <em>new</em> algorithms differs over levels of experience</p>
+<hr />
+<p><img src="Figs/AlgoExperienceReducedFacet-1.png" width="1152" /></p>
 <p><img src="Figs/histo_age-1.png" width="1152" /></p>
 <p><img src="Figs/plotAgeFacetContintent-1.png" width="1152" /></p>
 <p><img src="Figs/CreateWorldMap-1.png" width="1152" /></p>
